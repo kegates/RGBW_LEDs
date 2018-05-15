@@ -17,7 +17,7 @@ class Color{
         int getg();
         int getb();
         int getw();
-        void setCol(int r, int g, int b, int w);
+        void set(int r, int g, int b, int w);
 
     private:
         int red;
