@@ -9,31 +9,32 @@
 #ifndef LED_Strip.h
 #define LED_Strip.h
 
-Class Color{
+class Color{
     public:
         Color();
-	Color(int r, int g, int b, int w);
-	int getr();
-	int getg();
-	int getb();
-	int getw();
-	void setCol(int r, int g, int b, int w);
+        Color(int r, int g, int b, int w);
+        int getr();
+        int getg();
+        int getb();
+        int getw();
+        void setCol(int r, int g, int b, int w);
 
     private:
         int red;
-	int green;
-	int blue;
-	int white;
+        int green;
+        int blue;
+        int white;
 };
 
-Class Strip{
+class Strip{
     public:
         Strip(int rpin, int gpin, int bpin, int wpin);
-	Color getCol();
-	void setCol(Color color);
-
-
-
+        Color getCol();
+        void setCol(Color color);
+    
+    private:
+        int _rpin, _gpin, _bpin, _wpin;
+        Color curr_color;
 };
 
 #endif
